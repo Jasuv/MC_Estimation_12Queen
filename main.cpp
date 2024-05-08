@@ -4,12 +4,12 @@
 int main() {
     int n = 12;
     int steps = 100;
-    int ret = 0, tot = 0, i = 0;
+    int nodes = 0, total = 0, i = 0;
     for (i = 1; i <= steps; i++) {
-        ret = QueenMC(n);
-        tot += ret;
-        if (i % 10 == 0) cout << "step: " << i << " --- numnodes = " << ret << endl;
+        nodes = QueenMC(n);
+        total += nodes;
+        if (i % 10 == 0) cout << "step: " << i << " --- numnodes = " << nodes << endl;
     }
-    cout << "tot = " << tot << " --- avg = " << tot/steps << endl;
+    cout << "total nodes = " << total << endl << "avg = " << total/steps << endl;
     return 0;
 }

@@ -10,12 +10,18 @@ using namespace std;
 
 // return a random node from prom_children
 int randomNode(int* prom_children, int size);
+/*
+randNum = generate a randnum [1-n]
+if prom_children[randNum] == 0 randomize again
+return randNum
+*/
 
 // return is position promising
-bool promising(int* col, int i); 
+bool promising(int* col, int k, int i); 
 /*
 for j = 1 to k-1
-    if ((x[j] = i) or (|x[j]-i| = |j-k|))
+    if ((col[j] = i) // checks vertically
+        or (|col[j]-i| = |j-k|)) // checks horizontally/diagonally
         return false
 return true
 */
